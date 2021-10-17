@@ -1,0 +1,17 @@
+package javaapplication1;
+public class JavaApplication1 {
+
+   
+    public static void main(String[] args) {
+        String[] tablica={"a","b","c"}; // Tablica stringów
+        int[] tabInt={0,2,4,420,-420}; // Tablica intów
+        
+        
+        System.out.println(tablica[0]); //Wywolanie "a" z tablicy stringowej "b" by bylo [1] 
+        System.out.println(tablica.length); //dlugosc naszej tablicy
+        
+        for (int i=0; i<tablica.length; i++) //wyswietlanie wszystkich elementow tablicy nie poszczegolnego
+            System.out.println(tablica[i]);
+            }
+    
+}
