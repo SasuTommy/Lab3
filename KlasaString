@@ -1,0 +1,19 @@
+package javaapplication1;
+public class JavaApplication1 {
+
+   
+    public static void main(String[] args) {
+        String name = "Sasu - 'cytat'";
+        int length = name.length(); //dlugosc stringa
+        System.out.println("The length of string L "+length);
+        String BName = name.toUpperCase();  //do wyzszych liter
+        String SName = name.toLowerCase();  //do nizszych liter
+        int index = name.indexOf("asu");
+        String nick = "tommy";
+        nick.replace ('t', 'T');
+        
+        String NN = name+nick;
+        
+    }
+    
+}
