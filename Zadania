@@ -1,0 +1,76 @@
+package javaapplication1;
+import java.util.Scanner;
+
+public class JavaApplication1 {
+
+   
+    public static void main(String[] args) {
+       System.out.println("Zadanie 1");
+       System.out.println("Suma: ");
+       zadanie1();
+       System.out.println("Zadanie 2");
+        zadanie2();
+       System.out.println("Zadanie 3" );
+        zadanie3();
+        System.out.println("Zadanie 4" );
+        zadanie4();
+        System.out.println("Zadanie 5" );
+        zadanie5();
+}
+    public static void zadanie1(){ //static powoduje ze nie trzeba tworzyc obiektow
+       int tabInt[] = {2,4};
+       
+       System.out.println( tabInt[0]+tabInt[1]);
+    }
+    
+    public static void zadanie2(){
+        int tabInt[] = {2,3,420};
+        int max = tabInt[0];
+        int dlugosc = tabInt.length;
+        for (int i = 0; i < dlugosc; i++) {
+            if (tabInt[i] > max)
+                max = tabInt[i];
+        }
+        System.out.println("max: "+max);
+    }
+    public static void zadanie3(){
+        String[] tablica = {"a","b","c"};
+         for (int i=0; i<tablica.length; i++) 
+            System.out.println(tablica[i].toUpperCase());
+            }   
+    public static void zadanie4(){
+        Scanner in = new Scanner(System.in); //Potrzebne do wpisywania wartosci przez uzytkownika
+        int tabInt[] = new int[8]; //Tworzenie Tablicy 8 elementowej
+        int dlugosc = tabInt.length; //Tworze to aby program wiedzial ile ma elementow w tablicy
+        int max = tabInt[0]; //deklaruje 1 maksymalna wartosc
+         for (int i=0; i<tabInt.length; i++){ // przypisywanie uzytkownika  wartosci do n elementu
+             System.out.println("Podaj "+(i+1)+" element tablicy");
+             tabInt[i]=in.nextInt();
+            }
+         for (int i = 0; i < dlugosc; i++) { //Sprawdzanie najwiekszej liczby w tablicy
+            if (tabInt[i] > max)
+                max = tabInt[i];
+        }
+         System.out.println("Max wartosc tablicy: "+max);
+      }
+    public static void zadanie5(){
+         Scanner in = new Scanner(System.in); //Potrzebne do wpisywania wartosci przez uzytkownika
+        int tabInt[] = new int[5]; //Tworzenie Tablicy 5 elementowej
+        int dlugosc = tabInt.length; //Tworze to aby program wiedzial ile ma elementow w tablicy
+       
+        for (int i=0; i<tabInt.length; i++){ // przypisywanie uzytkownika  wartosci do n elementu
+             System.out.println("Podaj "+(i+1)+" element tablicy");
+             tabInt[i]=in.nextInt();
+    }
+         for (int i=0; i<tabInt.length; i++){ //Deklaracja aby wypisywac pokolei elementy tablicy
+             System.out.println("Silnia "+(i+1)+" elementu tablicy"); // wypisanie na konsoli na ktroym aktualnie elemencie sie znajdujemy
+            int x=1, s=1; // deklaracja 2 wartosci niezbednychn do silni
+            while(x<=tabInt[i]){ 
+            s=s*x;
+            x++;
+            } 
+           System.out.println(s);
+        }
+    }
+}
+    
